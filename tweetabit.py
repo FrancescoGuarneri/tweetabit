@@ -52,7 +52,7 @@ def job_function():
 
 print "TweetABit Started!"
 
-r=requester("kO6VhP09TQpKbImtMOFXXA","h6chYQ7wQNmUDc6ZUZmSUtszsf6D4QqfhFrmO9CvM6g","1057601774-kZw3YD1B88UHDIHq4CD0o6QlDUzhWJe1G5tJCse","HBO5GCaXTivYwxdLxERQOUpazEqAS5iJRhXFz1R51Wk")
+r=requester("","","","")
 	
 # Schedule job_function to be called every two hours
 sched.add_interval_job(job_function, hours=1)

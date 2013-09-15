@@ -43,10 +43,10 @@ class Requester
 end
 
 
-r = Requester.new("kO6VhP09TQpKbImtMOFXXA",
-	"h6chYQ7wQNmUDc6ZUZmSUtszsf6D4QqfhFrmO9CvM6g",
-	"1057601774-kZw3YD1B88UHDIHq4CD0o6QlDUzhWJe1G5tJCse",
-	"HBO5GCaXTivYwxdLxERQOUpazEqAS5iJRhXFz1R51Wk")
+r = Requester.new("",
+	"",
+	"",
+	"")
 
 scheduler.schedule_every('1h') { 
 	q = r.query("2/BTCUSD/money/ticker_fast")
