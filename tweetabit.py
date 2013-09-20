@@ -27,7 +27,9 @@ class requester:
 	def parse(self, json_data):
 		if json_data["result"]=="success":
 			usd = json_data["data"]["last"]
+			gbp = json_data["data"]["last"]
 			return usd["value"]+" "+usd["currency"]
+			return gbp["value"]+" "+gbp["currency"]
 		else:
 			print "Error connetting to http://data.mtgox.com/api/" 
 		return 42
@@ -47,7 +49,9 @@ def job_function():
 	price_usd = r.parse(q)
 	q = r.query("2/BTCEUR/money/ticker_fast")
 	price_eur = r.parse(q)
-	r.tweet("1 BTC = "+price_usd+" = "+price_eur)
+	q = r.query("2/BTCGBP/money/ticker_fast")
+	price_gbp = r.parse(q)
+	r.tweet("1 BTC = "+price_usd+" = "+price_gbp+" = "+price_eur)
 
 
 print "TweetABit Started!"
